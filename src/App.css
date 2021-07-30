@@ -1,0 +1,260 @@
+/* Other rules */
+
+.Header {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: fixed;
+  border-bottom: rgba(17, 17, 17, 0.1) solid 1px;
+}
+
+.Header--main {
+  height: 52px;
+}
+
+.Header--container {
+  display: flex;
+  width: 1280px;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.Header--content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Header-logo {
+  margin-right: 48px;
+}
+
+.Header--search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header--icon {
+  width: 590px;
+  padding-left: 10px;
+  background-color: #f5f6f7;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 37px;
+  border: 1px solid #f5f6f7;
+  font-size: 16px;
+  color: #cdcece;
+}
+
+.search-input {
+  width: 590px;
+  padding-left: 10px;
+  background-color: #f5f6f7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 37px;
+  border: none;
+  font-size: 16px;
+}
+
+.Header--actions {
+  display: flex;
+  align-items: center;
+  line-height: 16px;
+}
+
+.Header--login-signup {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  padding: 6px;
+  width: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header-signup {
+  margin-right: 3px;
+}
+
+.Header--sell {
+  margin-left: 10px;
+}
+
+.Header--sell-button {
+  text-align: center;
+  cursor: pointer;
+  background: #09b1ba;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  height: 30px;
+  padding: 0 8px;
+  width: 120px;
+}
+
+/* -------------------------- */
+
+.Home--body {
+  height: 100vh;
+  background-color: #f5f6f7;
+}
+
+.Home--container {
+  width: 1280px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.Home--img {
+  width: 194.656px;
+  height: 326.641px;
+  padding-right: 12px;
+}
+
+.Home--content-product {
+  padding: 8px;
+}
+
+.Home--price {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: rgb(17, 17, 17);
+}
+
+.Home--size {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(153, 153, 153);
+}
+
+.Home-brand {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(153, 153, 153);
+}
+
+/* -------------------------- */
+
+.Offer--body {
+  height: 100vh;
+  background-color: #f5f6f7;
+}
+.Offer--container {
+  width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 163px;
+}
+
+.Offer--content-img {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+.Offer--img {
+  width: 552px;
+  height: 624px;
+  border-radius: 4px;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.Offer--container-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 25%;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.Offer--price {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.Offer--content-product {
+  display: flex;
+}
+
+.Offer--content-product span {
+  flex: 1;
+}
+
+.Offer--keys {
+  font-size: 13px;
+  line-height: 19.5px;
+  font-weight: 700;
+  color: rgb(153, 153, 153);
+}
+
+.Offer--elem {
+  font-size: 13px;
+  line-height: 19.5px;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+}
+
+.Offer--product {
+  display: flex;
+  flex-direction: column;
+}
+
+.Offer--product-name {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(var(--cg1), 1);
+  font-weight: 700;
+}
+
+.Offer--product-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(102, 102, 102);
+  margin: 16px 0;
+}
+
+.Offer--product-username {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.Offer--button {
+  color: #fff;
+  background: #09b1ba;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  margin-top: 32px;
+}
+
+.Offer--button:hover {
+  background-color: #45c9cd;
+  cursor: pointer;
+}
+
+/* -------------------------- */
