@@ -20,7 +20,6 @@
   height: 100%;
   max-width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .Header--content {
@@ -40,7 +39,6 @@
 }
 
 .Header--icon {
-  width: 590px;
   padding-left: 10px;
   background-color: #f5f6f7;
   border-top-left-radius: 4px;
@@ -52,7 +50,7 @@
 }
 
 .search-input {
-  width: 590px;
+  width: 795px;
   padding-left: 10px;
   background-color: #f5f6f7;
   border-top-right-radius: 4px;
@@ -103,27 +101,58 @@
   width: 120px;
 }
 
+.Header--disconnect {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  height: 30px;
+  padding: 6px;
+  width: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Hero--video {
+  width: 1280px;
+  height: 403px;
+  pointer-events: none;
+  padding-top: 53px;
+  color: #f5f6f7;
+  margin: 0 auto 40px auto;
+}
+
 /* -------------------------- */
 
 .Home--body {
-  height: 100vh;
+  height: 100%;
   background-color: #f5f6f7;
+  padding-bottom: 200px;
 }
 
 .Home--container {
   width: 1280px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
+.Home--title {
+  padding: 8px;
+}
+
 .Home--img {
-  width: 194.656px;
+  width: 201.343px;
   height: 326.641px;
   padding-right: 12px;
+  object-fit: cover;
 }
 
 .Home--content-product {
-  padding: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 8px 25px 8px;
 }
 
 .Home--price {
@@ -139,7 +168,7 @@
   color: rgb(153, 153, 153);
 }
 
-.Home-brand {
+.Home--brand {
   font-size: 12px;
   line-height: 16px;
   color: rgb(153, 153, 153);
@@ -148,14 +177,14 @@
 /* -------------------------- */
 
 .Offer--body {
-  height: 100vh;
+  height: 100%;
   background-color: #f5f6f7;
 }
 .Offer--container {
   width: 1280px;
   display: flex;
   margin: 0 auto;
-  padding-top: 163px;
+  padding: 163px 0 200px 0;
 }
 
 .Offer--content-img {
@@ -168,6 +197,7 @@
   width: 552px;
   height: 624px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .divider {
@@ -258,3 +288,136 @@
 }
 
 /* -------------------------- */
+
+.Signup--body {
+  height: 100vh;
+  background-color: #f5f6f7;
+}
+
+.Signup--main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.Signup--container {
+  width: 400px;
+  height: 485px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Signup--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Signup--title {
+  height: 96px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px;
+}
+
+.Signup--input {
+  width: 368px;
+  height: 44px;
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 1px solid;
+  outline: none;
+  color: black;
+}
+
+.Signup--signup {
+  color: #fff;
+  background: #09b1ba;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  margin-bottom: 32px;
+  margin-top: 40px;
+  outline: none;
+}
+
+.Signup--signup:hover {
+  background-color: #45c9cd;
+  cursor: pointer;
+}
+
+/* -------------------------- */
+
+.Login--body {
+  height: 100vh;
+  background-color: #f5f6f7;
+}
+
+.Login--main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.Login--container {
+  width: 400px;
+  height: 485px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Login--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login--title {
+  height: 96px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Login--input {
+  width: 368px;
+  height: 44px;
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 1px solid;
+  outline: none;
+  color: black;
+}
+
+.Login--login {
+  color: #fff;
+  background: #09b1ba;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  margin-bottom: 32px;
+  margin-top: 40px;
+  outline: none;
+}
+
+.Login--login:hover {
+  background-color: #45c9cd;
+  cursor: pointer;
+}

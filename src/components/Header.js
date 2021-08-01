@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({ userToken, setUser }) => {
   return userToken ? (
-    <button onClick={() => setUser(null)}>Se déconnecter</button>
+    <button
+      className="Header--disconnect"
+      onClick={() => setUser(null)}
+      style={{ color: "#09b1ba", textDecoration: "none" }}
+    >
+      Se déconnecter
+    </button>
   ) : (
     <div className="Header">
       <div className="Header--main">

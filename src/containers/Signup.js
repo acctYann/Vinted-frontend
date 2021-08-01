@@ -38,26 +38,42 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={(event) => setUsername(event.target.value)}
-          type="text"
-          placeholder="username"
-        />
-        <input
-          onChange={(event) => setEmail(event.target.value)}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          onChange={(event) => setPassword(event.target.value)}
-          type="password"
-          placeholder="password"
-        />
-        <p style={{ color: "red" }}>{errorMessage}</p>
-        <input type="submit" value="S'inscrire" />
-      </form>
+    <div className="Signup--body">
+      <div className="Signup--main">
+        <form className="Signup--container" onSubmit={handleSubmit}>
+          <div className="Signup--title">
+            Rejoins le mouvement de la seconde main et vends sans frais !
+          </div>
+          <div className="Signup--content">
+            <input
+              className="Signup--input"
+              onChange={(event) => setUsername(event.target.value)}
+              type="text"
+              placeholder="Nom"
+            />
+            <input
+              className="Signup--input"
+              onChange={(event) => setEmail(event.target.value)}
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              className="Signup--input"
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Mot de passe"
+            />
+          </div>
+          <div>
+            <p style={{ color: "red", marginBottom: "10px" }}>{errorMessage}</p>
+            <input
+              className="Signup--signup"
+              type="submit"
+              value="S'inscrire"
+            />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

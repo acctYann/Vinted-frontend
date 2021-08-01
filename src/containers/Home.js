@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -26,14 +27,24 @@ const Home = () => {
     <p>Chargement...</p>
   ) : (
     <div className="Home--body">
-      {data.offers.map((offer, index) => {
-        return (
-          <div className="Home--container-product">
-            <div className="Home--container">
+      <Hero />
+      <div className="Home--container">
+        {data.offers.map((offer, index) => {
+          return (
+            <div className="Home--container-product">
               <Link
                 to={`/offer/${offer._id}`}
                 style={{ textDecoration: "none" }}
               >
+                <div
+                  className="Home--title"
+                  style={{
+                    textDecoration: "none",
+                    color: "rgb(153, 153, 153)",
+                  }}
+                >
+                  {offer.owner.account.username}
+                </div>
                 <div key={offer._id}>
                   <img
                     className="Home--img"
@@ -46,16 +57,16 @@ const Home = () => {
                     <div className="Home--size">
                       {offer.product_details[1].TAILLE}
                     </div>
-                    <div className="Home-brand">
+                    <div className="Home--brand">
                       {offer.product_details[0].MARQUE}
                     </div>
                   </div>
                 </div>
               </Link>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
