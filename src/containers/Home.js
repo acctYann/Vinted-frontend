@@ -31,7 +31,7 @@ const Home = () => {
       <div className="Home--container">
         {data.offers.map((offer, index) => {
           return (
-            <div className="Home--container-product">
+            <div key={offer._id} className="Home--container-product">
               <Link
                 to={`/offer/${offer._id}`}
                 style={{ textDecoration: "none" }}
@@ -45,7 +45,7 @@ const Home = () => {
                 >
                   {offer.owner.account.username}
                 </div>
-                <div key={offer._id}>
+                <div>
                   <img
                     className="Home--img"
                     style={{ height: 326.641 }}

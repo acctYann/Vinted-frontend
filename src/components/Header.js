@@ -26,8 +26,9 @@ const Header = ({ userToken, setUser }) => {
               <FontAwesomeIcon className="Header--icon" icon="search" />
               <input
                 type="text"
-                class="search-input"
+                className="search-input"
                 placeholder="Recherche des articles"
+                style={{ outline: "none" }}
               />
             </div>
           </div>
