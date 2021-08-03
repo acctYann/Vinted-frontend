@@ -84,6 +84,9 @@
 }
 
 .Header--sell {
+  display: flex;
+  align-items: center;
+  line-height: 16px;
   margin-left: 10px;
 }
 
@@ -104,7 +107,7 @@
 .Header--disconnect {
   cursor: pointer;
   background: none;
-  border: 1px solid #09b1ba;
+  border: 1px solid #ff0000;
   border-radius: 4px;
   font-size: 12px;
   line-height: 16px;
@@ -575,7 +578,16 @@
   padding: 24px;
 }
 
-.Publish--font {
+.Publish--textarea {
+  width: 50%;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  font-size: 16px;
+  outline: none;
+}
+
+.Publish--input {
   width: 50%;
   border: none;
   border-bottom: 1px solid #ebedee;
@@ -583,15 +595,7 @@
   outline: none;
 }
 
-.Publish--font:hover {
-  border-bottom: 1px solid #0ab1ba;
-}
-
-.Publish--checkbox-section {
-  width: 50%;
-}
-
-.Publish--font2 {
+.Publish--input2 {
   width: 620px;
   border: none;
   border-bottom: 1px solid #ebedee;
@@ -600,16 +604,32 @@
   margin-bottom: 40px;
 }
 
-.Publish--font2:hover {
+.Publish--textarea::placeholder {
+  color: #eaebec;
+}
+
+.Publish--input::placeholder {
+  color: #eaebec;
+}
+
+.Publish--input2::placeholder {
+  color: #eaebec;
+}
+
+.Publish--textarea:hover {
   border-bottom: 1px solid #0ab1ba;
 }
 
-.Publish--font::placeholder {
-  color: #eaebec;
+.Publish--input:hover {
+  border-bottom: 1px solid #0ab1ba;
 }
 
-.Publish--font2::placeholder {
-  color: #eaebec;
+.Publish--input2:hover {
+  border-bottom: 1px solid #0ab1ba;
+}
+
+.Publish--checkbox-section {
+  width: 50%;
 }
 
 .Publish--button-content {
