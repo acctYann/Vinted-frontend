@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <div className="Hero--container">
@@ -6,7 +8,9 @@ const Hero = () => {
           <div className="Hero--title">
             Prêts à faire du tri dans vos placards ?
           </div>
-          <button className="Hero--button">Commencer à vendre</button>
+          <Link to="/publish">
+            <button className="Hero--button">Commencer à vendre</button>
+          </Link>
         </div>
       </div>
       <div className="Hero--video">

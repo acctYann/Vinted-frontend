@@ -22,15 +22,15 @@ const Publish = ({ userToken }) => {
 
       const formData = new FormData();
 
-      formData.apprend("title", title);
-      formData.apprend("description", description);
-      formData.apprend("price", price);
-      formData.apprend("condition", condition);
-      formData.apprend("city", city);
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("price", price);
+      formData.append("condition", condition);
+      formData.append("city", city);
       formData.append("brand", brand);
-      formData.apprend("size", size);
-      formData.apprend("color", color);
-      formData.apprend("picture", picture);
+      formData.append("size", size);
+      formData.append("color", color);
+      formData.append("picture", picture);
 
       const response = await axios.post(
         " https://lereacteur-vinted-api.herokuapp.com/offer/publish",
@@ -60,21 +60,16 @@ const Publish = ({ userToken }) => {
           <div>
             <div className="Publish--picture">
               <div className="Publish--border">
-                <div>
-                  <label className="Publish--file" htlmfor="file">
-                    <FontAwesomeIcon className="Publish--icon" icon="plus" />
-                    <div className="Publish--text">Ajoutez une photo</div>
-                    <input
-                      style={{ display: "none" }}
-                      name=""
-                      id=""
-                      type="file"
-                      onChange={(event) => {
-                        setPicture(event.target.files[0]);
-                      }}
-                    />
-                  </label>
-                </div>
+                <label className="Publish--file" htlmfor="file">
+                  <FontAwesomeIcon className="Publish--icon" icon="plus" />
+                  <span className="Publish--text">Ajoutez une photo</span>
+                  <input
+                    id="file"
+                    style={{ display: "none" }}
+                    type="file"
+                    onChange={(event) => setPicture(event.target.files[0])}
+                  />
+                </label>
               </div>
             </div>
           </div>
