@@ -1,5 +1,7 @@
+// HEADER
+import "../Header/index.css"
 import { Link } from "react-router-dom";
-import logo from "../assets/img/logo.png";
+import logo from "../../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({ userToken, setUser }) => {

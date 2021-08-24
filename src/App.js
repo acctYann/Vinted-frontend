@@ -2,15 +2,23 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState } from "react";
 import Cookies from "js-cookie";
-import Offer from "./containers/Offer";
-import Home from "./containers/Home";
-import Header from "./components/Header";
-import Login from "./containers/Login";
-import Signup from "./containers/Signup";
-import Publish from "./containers/Publish";
+
+import Offer from "./containers/Offer/index.js";
+import Home from "./containers/Home/index.js";
+import Header from "./components/Header/index.js";
+import Login from "./containers/Login/index.js";
+import Signup from "./containers/Signup/index.js";
+import Publish from "./containers/Publish/index.js";
+import Payment from "./containers/Payment/index.js";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch, faPlus);
+import {
+  faSearch,
+  faTimes,
+  faPlus,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faTimes, faPlus, faCheck);
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -45,6 +53,9 @@ const App = () => {
         </Route>
         <Route path="/publish">
           <Publish userToken={userToken} />
+        </Route>
+        <Route>
+          <Payment path="/payment" />
         </Route>
         <Route path="/">
           <Home />

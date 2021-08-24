@@ -1,3 +1,5 @@
+// PUBLISH
+import "../Publish/index.css";
 import { Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
@@ -13,13 +15,14 @@ const Publish = ({ userToken }) => {
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [picture, setPicture] = useState();
+  const [preview, setPreview] = useState("");
+  const [acceptedExchange, setAcceptedExchange] = useState(false);
 
   const history = useHistory();
 
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-
       const formData = new FormData();
 
       formData.append("title", title);
@@ -49,6 +52,7 @@ const Publish = ({ userToken }) => {
     } catch (error) {
       console.log(error.response);
       console.log(error.message);
+      alert("Une erreur est survenue, veuillez réssayer");
     }
   };
 
@@ -58,20 +62,41 @@ const Publish = ({ userToken }) => {
         <div className="Publish--title">Vends ton article</div>
         <form className="Publish--container" onSubmit={handleSubmit}>
           <div>
-            <div className="Publish--picture">
-              <div className="Publish--border">
-                <label className="Publish--file" htlmfor="file">
-                  <FontAwesomeIcon className="Publish--icon" icon="plus" />
-                  <span className="Publish--text">Ajoutez une photo</span>
+            {preview ? (
+              <div className="Publish--preview-image">
+                <div className="Publish--preview-image-border">
+                  <img src={preview} alt="pré-visualisation" />
+                  <div
+                    className="Publish--remove-img-button"
+                    onClick={() => {
+                      setPreview("");
+                    }}
+                  >
+                    <FontAwesomeIcon className="Publish--icon" icon="times" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="Publish--preview">
+                <div className="Publish--border">
+                  <label htmlFor="file" className="Publish--label-file">
+                    <FontAwesomeIcon className="Publish--icon" icon="plus" />
+                    <span className="Publish-title-input">
+                      Ajoute une photo
+                    </span>
+                  </label>
                   <input
                     id="file"
-                    style={{ display: "none" }}
                     type="file"
-                    onChange={(event) => setPicture(event.target.files[0])}
+                    className="Publish--file"
+                    onChange={(event) => {
+                      setPicture(event.target.files[0]);
+                      setPreview(URL.createObjectURL(event.target.files[0]));
+                    }}
                   />
-                </label>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <div>
             <div className="Publish--input-section1">
@@ -153,7 +178,26 @@ const Publish = ({ userToken }) => {
                     placeholder="0,00 €"
                   />
                   <div className="Publish--checkbox-input">
-                    <input type="checkbox" />
+                    {acceptedExchange ? (
+                      <label
+                        htmlFor="exchange"
+                        className="Publish--checkbox-design-checked"
+                      >
+                        <FontAwesomeIcon icon="check" size="xs" color="white" />
+                      </label>
+                    ) : (
+                      <label
+                        htmlFor="exchange"
+                        className="Publish--checkbox-design"
+                      ></label>
+                    )}
+                    <input
+                      type="checkbox"
+                      name="exchange"
+                      id="exchange"
+                      value="exchange"
+                      onChange={() => setAcceptedExchange(!acceptedExchange)}
+                    />
                     <span>Je suis intéressé(e) par les échanges</span>
                   </div>
                 </div>
@@ -170,7 +214,7 @@ const Publish = ({ userToken }) => {
       </div>
     </div>
   ) : (
-    <Redirect to="/login" />
+    <Redirect to={{ pathname: "/login", state: { fromPublish: true } }} />
   );
 };
 
