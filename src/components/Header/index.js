@@ -1,5 +1,5 @@
 // HEADER
-import "../Header/index.css"
+import "../Header/index.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

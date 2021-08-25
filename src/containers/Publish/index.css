@@ -36,14 +36,15 @@
   position: relative;
   color: black;
   background-color: white;
-  width: 40px;
-  height: 30px;
-  right: 60px;
-  bottom: 70px;
+  width: 20px;
+  height: 20px;
+  right: 35px;
+  bottom: 75px;
   border-radius: 4px;
   cursor: pointer;
 }
-.Publish--icon {
+.Publish--icon-times {
+  margin: 0 3px;
   font-size: 20px;
 }
 .Publish--preview {
@@ -81,7 +82,7 @@
   line-height: 13.3px;
   font-weight: 700;
 }
-.Publish--icon {
+.Publish--icon-plus {
   margin: 0 10px;
   font-size: 30px;
 }

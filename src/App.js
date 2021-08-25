@@ -42,20 +42,20 @@ const App = () => {
     <Router>
       <Header userToken={userToken} setUser={setUser} />
       <Switch>
-        <Route path="/offer/:id">
-          <Offer />
+        <Route path="/signup">
+          <Signup setUser={setUser} />
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
-        <Route path="/signup">
-          <Signup setUser={setUser} />
-        </Route>
         <Route path="/publish">
           <Publish userToken={userToken} />
         </Route>
-        <Route>
-          <Payment path="/payment" />
+        <Route path="/offer/:id">
+          <Offer />
+        </Route>
+        <Route path="/payment">
+          <Payment />
         </Route>
         <Route path="/">
           <Home />

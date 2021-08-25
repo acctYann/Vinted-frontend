@@ -1,8 +1,9 @@
 // SIGNUP
-import "../Signup/index.css"
-import { useState } from "react";
-import axios from "axios";
+import "../Signup/index.css";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Signup = ({ setUser }) => {
   const [username, setUsername] = useState("");
@@ -17,7 +18,7 @@ const Signup = ({ setUser }) => {
       event.preventDefault();
 
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        "https://api--vinted.herokuapp.com/user/signup",
         {
           email: email,
           username: username,
@@ -26,9 +27,11 @@ const Signup = ({ setUser }) => {
       );
 
       if (response.data.token) {
-        console.log(response.data.token);
+        // console.log(response.data.token);
         setUser(response.data.token);
         history.push("/");
+      } else {
+        alert("Une erreur est survenue, veuillez réssayer.");
       }
     } catch (error) {
       console.log(error.response);
@@ -51,11 +54,14 @@ const Signup = ({ setUser }) => {
               className="Signup--input"
               onChange={(event) => setUsername(event.target.value)}
               type="text"
-              placeholder="Nom"
+              placeholder="Nom d'utilisateur"
             />
             <input
               className="Signup--input"
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(event) => {
+                setEmail(event.target.value);
+                setErrorMessage("");
+              }}
               type="email"
               placeholder="Email"
             />
@@ -66,13 +72,31 @@ const Signup = ({ setUser }) => {
               placeholder="Mot de passe"
             />
           </div>
-          <div>
-            <p style={{ color: "red", marginBottom: "10px" }}>{errorMessage}</p>
+          <div className="Signup--checkbox-container">
+            <div>
+              <input className="checkbox" type="checkbox" />
+              <span className="span">S'inscrire à notre newsletter</span>
+            </div>
+            <p>
+              En m'inscrivant je confirme avoir lu et accepté les Termes &
+              Conditions et Politique de Confidentialité de Vinted. Je confirme
+              avoir au moins 18 ans.
+            </p>
+          </div>
+          <span className="Signup--login-error-message">{errorMessage}</span>
+          <div className="Signup--content-signup">
             <input
               className="Signup--signup"
               type="submit"
               value="S'inscrire"
             />
+            <Link
+              className="link"
+              to="/login"
+              style={{ textDecoration: "none" }}
+            >
+              Tu as déjà un compte ? Connecte-toi !
+            </Link>
           </div>
         </form>
       </div>

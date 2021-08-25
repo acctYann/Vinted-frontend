@@ -36,7 +36,7 @@ const Publish = ({ userToken }) => {
       formData.append("picture", picture);
 
       const response = await axios.post(
-        " https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+        " https://api--vinted.herokuapp.com/offer/publish",
         formData,
         {
           headers: {
@@ -72,7 +72,10 @@ const Publish = ({ userToken }) => {
                       setPreview("");
                     }}
                   >
-                    <FontAwesomeIcon className="Publish--icon" icon="times" />
+                    <FontAwesomeIcon
+                      className="Publish--icon-times"
+                      icon="times"
+                    />
                   </div>
                 </div>
               </div>
@@ -80,7 +83,10 @@ const Publish = ({ userToken }) => {
               <div className="Publish--preview">
                 <div className="Publish--border">
                   <label htmlFor="file" className="Publish--label-file">
-                    <FontAwesomeIcon className="Publish--icon" icon="plus" />
+                    <FontAwesomeIcon
+                      className="Publish--icon-plus"
+                      icon="plus"
+                    />
                     <span className="Publish-title-input">
                       Ajoute une photo
                     </span>

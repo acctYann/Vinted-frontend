@@ -1,59 +1,86 @@
 /* LOGIN */
+
 .Login--body {
-    height: 100vh;
-    background-color: #f5f6f7;
-  }
-  .Login--main {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 100px;
-  }
-  .Login--container {
-    width: 400px;
-    height: 485px;
-    background-color: #fff;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    box-shadow: 0px 0px 2px rgba(17, 17, 17, 0.24);
-  }
-  .Login--content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Login--title {
-    height: 96px;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .Login--input {
-    width: 368px;
-    height: 44px;
-    border-radius: 4px;
-    margin-top: 8px;
-    border: 1px solid;
-    outline: none;
-    color: black;
-  }
-  .Login--login {
-    color: #fff;
-    background: #09b1ba;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    height: 36px;
-    padding: 0 16px;
-    line-height: 36px;
-    margin-bottom: 32px;
-    margin-top: 40px;
-    outline: none;
-  }
-  .Login--login:hover {
-    background-color: #45c9cd;
-    cursor: pointer;
-  }
+  height: 100vh;
+  background-color: #f5f6f7;
+}
+
+.Login--main {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.Login--container {
+  width: 400px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 2px rgba(17, 17, 17, 0.24);
+}
+
+.Login--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login--title {
+  height: 96px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px;
+}
+
+.Login--input {
+  width: 368px;
+  height: 44px;
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 1px solid;
+  outline: none;
+  color: black;
+}
+
+.Login--login-error-message {
+  color: red;
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.Login--login {
+  color: #fff;
+  background: #09b1ba;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  outline: none;
+}
+
+.Login--login:hover {
+  background-color: #45c9cd;
+  cursor: pointer;
+}
+
+.Login--centent-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.link {
+  color: #09b1ba;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

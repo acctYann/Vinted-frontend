@@ -1,12 +1,14 @@
 // LOGIN
-import "../Login/index.css"
+import "../Login/index.css";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const history = useHistory();
 
@@ -15,7 +17,7 @@ const Login = ({ setUser }) => {
       event.preventDefault();
 
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/login",
+        "https://api--vinted.herokuapp.com/user/login",
         {
           email: email,
           password: password,
@@ -26,7 +28,10 @@ const Login = ({ setUser }) => {
         history.push("/");
       }
     } catch (error) {
-      console.log(error.message);
+      if (error.response.status === 401 || error.response.status === 400) {
+        setErrorMessage("Mauvais email et/ou mot de passe");
+        console.log(error.message);
+      }
     }
   };
 
@@ -50,12 +55,20 @@ const Login = ({ setUser }) => {
               placeholder="Mot de passe"
             />
           </div>
-          <div>
+          <span className="Login--login-error-message">{errorMessage}</span>
+          <div className="Login--centent-login">
             <input
               className="Login--login"
               type="submit"
               value="Se connecter"
             />
+            <Link
+              className="link"
+              to="/signup"
+              style={{ textDecoration: "none" }}
+            >
+              Pas encore de compte ? Inscris-toi !
+            </Link>
           </div>
         </form>
       </div>
