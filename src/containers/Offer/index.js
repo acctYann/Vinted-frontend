@@ -12,8 +12,8 @@ const Offer = () => {
   const history = useHistory();
 
   const price = data.product_price;
-  const protectionFees = (price / 10).toFixed(2); // toFixed() = arrondir à 2 chiffres après la virgule
-  const shippingFees = (protectionFees * 2).toFixed(2);
+  const protectionFees = 0.7;
+  const shippingFees = (price * 0.05).toFixed(2);
   const total = Number(price) + Number(protectionFees) + Number(shippingFees);
   // console.log(total);
 
@@ -79,13 +79,15 @@ const Offer = () => {
               history.push({
                 pathname: "/payment",
                 state: {
-                  data: data,
+                  title: data.product_name,
+                  price: data.product_price,
                   protectionFees: protectionFees,
                   shippingFees: shippingFees,
                   total: total,
                 },
               });
-              // console.log(data);
+              // console.log(data.product_name);
+              // console.log(total);
             }}
           >
             Acheter

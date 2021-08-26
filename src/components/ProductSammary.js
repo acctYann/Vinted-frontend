@@ -1,11 +1,12 @@
+// PRODUCTSAMMARY
 import "../containers/Payment/index.css";
 import React from "react";
 
 const ProductSammary = ({ price, protectionFees, shippingFees, total }) => {
   return (
-    <div>
-      <div>Résumé de la commande</div>
-      <div>
+    <div className="Payment--card summary">
+      <div className="title">Résumé de la commande</div>
+      <div className="content">
         <ul>
           <li>
             Commande <span>{price} €</span>
@@ -18,10 +19,10 @@ const ProductSammary = ({ price, protectionFees, shippingFees, total }) => {
           </li>
         </ul>
       </div>
-      <div></div>
-      <div>
+      <div className="divider" />
+      <div className="content">
         <ul>
-          <li>
+          <li className="bold">
             Total <span>{total} €</span>
           </li>
         </ul>
