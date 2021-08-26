@@ -5,11 +5,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Offer = () => {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const { id } = useParams();
   const history = useHistory();
 
-  const [data, setData] = useState();
-  const [isLoading, setIsLoading] = useState(true);
+  const price = data.product_price;
+  const protectionFees = (price / 10).toFixed(2); // toFixed() = arrondir à 2 chiffres après la virgule
+  const shippingFees = (protectionFees * 2).toFixed(2);
+  const total = Number(price) + Number(protectionFees) + Number(shippingFees);
+  // console.log(total);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -74,8 +80,12 @@ const Offer = () => {
                 pathname: "/payment",
                 state: {
                   data: data,
+                  protectionFees: protectionFees,
+                  shippingFees: shippingFees,
+                  total: total,
                 },
               });
+              // console.log(data);
             }}
           >
             Acheter

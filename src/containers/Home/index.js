@@ -13,7 +13,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api--vinted.herokuapp.com//offers"
+          "https://api--vinted.herokuapp.com/offers"
         );
         // console.log(response.data);
         setData(response.data);
@@ -50,7 +50,6 @@ const Home = () => {
                 <div>
                   <img
                     className="Home--img"
-                    style={{ height: 326.641 }}
                     src={offer.product_image.secure_url}
                     alt={offer.product_name}
                   />
