@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = ({ userToken, setUser }) => {
+const Header = ({ userToken, setUser, setSearch }) => {
   return (
     <>
       <div className="Header">
@@ -26,6 +26,7 @@ const Header = ({ userToken, setUser }) => {
                   className="search-input"
                   placeholder="Recherche des articles"
                   style={{ outline: "none" }}
+                  onChange={(event) => setSearch(event.target.value)}
                 />
               </div>
             </div>

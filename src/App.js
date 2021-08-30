@@ -1,7 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import axios from "axios";
 
 import Offer from "./containers/Offer/index.js";
 import Home from "./containers/Home/index.js";
@@ -22,6 +23,13 @@ library.add(faSearch, faTimes, faPlus, faCheck);
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [sortPrice, setSortPrice] = useState(false);
+  const [fetchRangeValues, setFetchRangeValues] = useState([0, 10000]);
+  const [search, setSearch] = useState("");
+  const [skip, setSkip] = useState(1);
+  const [limit, setLimit] = useState(5);
 
   // - créer un cookie contenant le token du user
   // - modifier l'état userToken pour permettre le changement d'affichage dans Header
@@ -38,9 +46,25 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `https://api--vinted.herokuapp.com/offers?priceMin=${
+          fetchRangeValues[0]
+        }&priceMax=${fetchRangeValues[1]}&sort=${
+          sortPrice ? "price-desc" : "price-asc"
+        }&title=${search}&skip=${skip}&limit=${limit}`
+      );
+
+      setData(response.data);
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [fetchRangeValues, sortPrice, search, skip, limit]);
+
   return (
     <Router>
-      <Header userToken={userToken} setUser={setUser} />
+      <Header userToken={userToken} setUser={setUser} setSearch={setSearch} />
       <Switch>
         <Route path="/signup">
           <Signup setUser={setUser} />
@@ -58,7 +82,18 @@ const App = () => {
           <Payment />
         </Route>
         <Route path="/">
-          <Home />
+          <Home
+            data={data}
+            isLoading={isLoading}
+            setFetchRangeValues={setFetchRangeValues}
+            fetchRangeValues={fetchRangeValues}
+            setSortPrice={setSortPrice}
+            sortPrice={sortPrice}
+            skip={skip}
+            setSkip={setSkip}
+            limit={limit}
+            setLimit={setLimit}
+          />
         </Route>
       </Switch>
     </Router>

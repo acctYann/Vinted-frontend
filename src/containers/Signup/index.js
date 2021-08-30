@@ -27,15 +27,15 @@ const Signup = ({ setUser }) => {
       );
 
       if (response.data.token) {
-        // console.log(response.data.token);
+        console.log(response.data.token);
         setUser(response.data.token);
         history.push("/");
       } else {
         alert("Une erreur est survenue, veuillez réssayer.");
       }
     } catch (error) {
-      console.log(error.response);
-      console.log(error.message);
+      // console.log(error.response);
+      // console.log(error.message);
       if (error.response.status === 409) {
         setErrorMessage("Cet email est déjà utilisé.");
       }
@@ -74,7 +74,7 @@ const Signup = ({ setUser }) => {
           </div>
           <div className="Signup--checkbox-container">
             <div>
-              <input className="checkbox" type="checkbox" />
+              <input type="checkbox" />
               <span className="span">S'inscrire à notre newsletter</span>
             </div>
             <p>

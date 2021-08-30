@@ -1,0 +1,23 @@
+/* PAGINATION */
+.Pagination--page-num {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.Pagination--page-num-arrow {
+  margin: 0 10px;
+  border-radius: 50%;
+  line-height: 26px;
+  width: 28px;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  background-color: #09b1ba;
+  color: white;
+  cursor: pointer;
+}
