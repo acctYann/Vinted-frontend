@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center;
   font-size: 14px;
-  margin-top: 20px;
-  padding-bottom: 20px;
+  color: rgb(153, 153, 153);
+  padding-bottom: 5px;
+  margin-top: 5px;
   align-items: center;
   margin-left: 40px;
 }

@@ -3,36 +3,13 @@ import "../Home/index.css";
 import { Link } from "react-router-dom";
 
 import Hero from "../../components/Hero";
-import Filters from "../../components/Filters.js";
 
-const Home = ({
-  data,
-  isLoading,
-  setFetchRangeValues,
-  fetchRangeValues,
-  setSortPrice,
-  sortPrice,
-  skip,
-  setSkip,
-  limit,
-  setLimit,
-}) => {
+const Home = ({ data, isLoading }) => {
   return isLoading ? (
     <p>Chargement...</p>
   ) : (
     <div className="Home--body">
       <Hero />
-      <Filters
-        setFetchRangeValues={setFetchRangeValues}
-        fetchRangeValues={fetchRangeValues}
-        setSortPrice={setSortPrice}
-        sortPrice={sortPrice}
-        skip={skip}
-        setSkip={setSkip}
-        limit={limit}
-        setLimit={setLimit}
-        data={data}
-      />
       <div className="Home--container">
         {data.offers &&
           data.offers.map((offer, index) => {

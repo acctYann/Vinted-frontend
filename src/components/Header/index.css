@@ -14,6 +14,7 @@
 
 .Header--main {
   height: 52px;
+  border-bottom: rgba(17, 17, 17, 0.1) solid 1px;
 }
 
 .Header--container {

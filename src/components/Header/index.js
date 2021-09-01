@@ -1,10 +1,27 @@
 // HEADER
 import "../Header/index.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = ({ userToken, setUser, setSearch }) => {
+import Filters from "../Filters";
+
+const Header = ({
+  userToken,
+  setUser,
+  setSearch,
+  setFetchRangeValues,
+  fetchRangeValues,
+  setSortPrice,
+  sortPrice,
+  skip,
+  setSkip,
+  limit,
+  setLimit,
+  data,
+}) => {
+  const location = useLocation();
+
   return (
     <>
       <div className="Header">
@@ -68,6 +85,19 @@ const Header = ({ userToken, setUser, setSearch }) => {
             </div>
           </div>
         </div>
+        {location.pathname === "/" ? (
+          <Filters
+            setFetchRangeValues={setFetchRangeValues}
+            fetchRangeValues={fetchRangeValues}
+            setSortPrice={setSortPrice}
+            sortPrice={sortPrice}
+            skip={skip}
+            setSkip={setSkip}
+            limit={limit}
+            setLimit={setLimit}
+            data={data}
+          />
+        ) : null}
       </div>
     </>
   );

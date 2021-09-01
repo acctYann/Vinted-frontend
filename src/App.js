@@ -64,7 +64,20 @@ const App = () => {
 
   return (
     <Router>
-      <Header userToken={userToken} setUser={setUser} setSearch={setSearch} />
+      <Header
+        userToken={userToken}
+        setUser={setUser}
+        setSearch={setSearch}
+        setFetchRangeValues={setFetchRangeValues}
+        fetchRangeValues={fetchRangeValues}
+        setSortPrice={setSortPrice}
+        sortPrice={sortPrice}
+        skip={skip}
+        setSkip={setSkip}
+        limit={limit}
+        setLimit={setLimit}
+        data={data}
+      />
       <Switch>
         <Route path="/signup">
           <Signup setUser={setUser} />
@@ -82,18 +95,7 @@ const App = () => {
           <Payment />
         </Route>
         <Route path="/">
-          <Home
-            data={data}
-            isLoading={isLoading}
-            setFetchRangeValues={setFetchRangeValues}
-            fetchRangeValues={fetchRangeValues}
-            setSortPrice={setSortPrice}
-            sortPrice={sortPrice}
-            skip={skip}
-            setSkip={setSkip}
-            limit={limit}
-            setLimit={setLimit}
-          />
+          <Home data={data} isLoading={isLoading} />
         </Route>
       </Switch>
     </Router>

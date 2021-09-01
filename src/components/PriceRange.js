@@ -9,7 +9,7 @@ const PriceRange = ({ setFetchRangeValues }) => {
 
   return (
     <Range
-      step={5} // Nombre d'écart entre le prix
+      step={5} // Nombre d'écart entre les prix
       min={MIN}
       max={MAX}
       values={rangeValues}
@@ -18,6 +18,7 @@ const PriceRange = ({ setFetchRangeValues }) => {
         setFetchRangeValues(values);
       }}
       renderTrack={({ props, children }) => (
+        // CSS de la barre
         <div
           style={{
             ...props.style,
@@ -46,9 +47,11 @@ const PriceRange = ({ setFetchRangeValues }) => {
         </div>
       )}
       renderThumb={({ index, props, isDragged }) => (
+        // CSS des boutons
         <div
           {...props}
           style={{
+            // Cercle
             ...props.style,
             height: "15px",
             width: "15px",
@@ -63,8 +66,9 @@ const PriceRange = ({ setFetchRangeValues }) => {
         >
           <div
             style={{
+              // Carte des prix
               position: "absolute",
-              top: "-28px",
+              top: "-26px",
               color: "#fff",
               fontSize: "12px",
               padding: "4px",

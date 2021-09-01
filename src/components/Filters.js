@@ -19,15 +19,20 @@ const Filters = ({
         <div
           style={{
             width: 1280,
-            marginTop: 25,
             fontSize: "12px",
             display: "flex",
             alignItems: "center",
             margin: "auto",
-            padding: 20,
+            paddingTop: 20,
           }}
         >
-          <span style={{ marginRight: 10, fontSize: 14 }}>
+          <span
+            style={{
+              marginRight: 10,
+              fontSize: 14,
+              color: "rgb(153, 153, 153)",
+            }}
+          >
             Trier par prix :
           </span>
           <span className="checkbox">
@@ -43,7 +48,15 @@ const Filters = ({
               </div>
             </div>
           </span>
-          <span style={{ marginRight: 10, fontSize: 14 }}>Prix entre : </span>
+          <span
+            style={{
+              marginRight: 10,
+              fontSize: 14,
+              color: "rgb(153, 153, 153)",
+            }}
+          >
+            Prix entre :{" "}
+          </span>
           <PriceRange setFetchRangeValues={setFetchRangeValues} />
           <Pagination
             skip={skip}
