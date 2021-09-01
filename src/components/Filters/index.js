@@ -1,7 +1,9 @@
+// FILTERS
+import "../Filters/index.css";
 import React from "react";
 
-import PriceRange from "./PriceRange";
-import Pagination from "../components/Pagination/index.js";
+import PriceRange from "../PriceRange/index.js";
+import Pagination from "../Pagination/index.js";
 
 const Filters = ({
   setFetchRangeValues,
@@ -16,25 +18,8 @@ const Filters = ({
   return (
     <>
       <div>
-        <div
-          style={{
-            width: 1280,
-            fontSize: "12px",
-            display: "flex",
-            alignItems: "center",
-            margin: "auto",
-            paddingTop: 20,
-          }}
-        >
-          <span
-            style={{
-              marginRight: 10,
-              fontSize: 14,
-              color: "rgb(153, 153, 153)",
-            }}
-          >
-            Trier par prix :
-          </span>
+        <div className="Filters">
+          <span className="Filters--title">Trier par prix :</span>
           <span className="checkbox">
             <input type="checkbox" readOnly checked={sortPrice} name="price" />
             <div
@@ -48,15 +33,7 @@ const Filters = ({
               </div>
             </div>
           </span>
-          <span
-            style={{
-              marginRight: 10,
-              fontSize: 14,
-              color: "rgb(153, 153, 153)",
-            }}
-          >
-            Prix entre :{" "}
-          </span>
+          <span className="Filters--title">Prix entre : </span>
           <PriceRange setFetchRangeValues={setFetchRangeValues} />
           <Pagination
             skip={skip}

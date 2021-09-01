@@ -1,3 +1,5 @@
+// PRICE RANGE
+import "../PriceRange/index.css";
 import React, { useState } from "react";
 import { Range, getTrackBackground } from "react-range";
 
@@ -20,26 +22,21 @@ const PriceRange = ({ setFetchRangeValues }) => {
       renderTrack={({ props, children }) => (
         // CSS de la barre
         <div
+          className="PriceRange--renderTrack-bar"
           style={{
             ...props.style,
-            height: "36px",
-            display: "flex",
-            width: "25%",
           }}
         >
           <div
+            className="PriceRange--renderTrack-bg"
             ref={props.ref}
             style={{
-              height: "5px",
-              width: "100%",
-              borderRadius: "4px",
               background: getTrackBackground({
                 values: rangeValues,
                 colors: ["#ccc", " #09b1ba", "#ccc"],
                 min: MIN,
                 max: MAX,
               }),
-              alignSelf: "center",
             }}
           >
             {children}
@@ -49,32 +46,17 @@ const PriceRange = ({ setFetchRangeValues }) => {
       renderThumb={({ index, props, isDragged }) => (
         // CSS des boutons
         <div
+          // Cercle
+          className="PriceRange--renderThumb-cercle"
           {...props}
           style={{
-            // Cercle
             ...props.style,
-            height: "15px",
-            width: "15px",
-            borderRadius: "50%",
             border: isDragged ? "" : "1px solid white",
-            backgroundColor: "#09b1ba",
-            outline: "none",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           <div
-            style={{
-              // Carte des prix
-              position: "absolute",
-              top: "-26px",
-              color: "#fff",
-              fontSize: "12px",
-              padding: "4px",
-              borderRadius: "4px",
-              backgroundColor: "#09b1ba",
-            }}
+            // Carte des prix
+            className="PriceRange--renderThumb-price"
           >
             {rangeValues[index]}€
           </div>

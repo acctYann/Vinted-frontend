@@ -21,7 +21,6 @@
   display: flex;
   width: 1280px;
   height: 100%;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -32,6 +31,8 @@
 }
 
 .Header-logo {
+  width: 75px;
+  height: 30px;
   margin-right: 48px;
 }
 
@@ -118,4 +119,63 @@
   padding: 6px;
   width: 130px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Header--container {
+    max-width: 100%;
+  }
+
+  .Header--main {
+    height: 42px;
+  }
+  .Header--container {
+    margin: 0;
+  }
+
+  .Header--content {
+    width: 230px;
+  }
+
+  .Header-logo {
+    width: 50px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .Header--icon {
+    padding-left: 5px;
+    height: 27px;
+    font-size: 10px;
+  }
+
+  .search-input {
+    width: 115px;
+    height: 27px;
+    font-size: 10px;
+    padding-left: 3px;
+  }
+
+  .Header--login-signup {
+    font-size: 10px;
+    line-height: 11px;
+    height: 13px;
+    padding: 6px;
+    width: 110px;
+  }
+
+  .Header--disconnect {
+    font-size: 10px;
+    line-height: 11px;
+    height: 27px;
+    padding: 6px;
+    width: 124px;
+  }
+
+  .Header--sell {
+    display: none;
+  }
 }

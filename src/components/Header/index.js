@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Filters from "../Filters";
+import Filters from "../Filters/index.js";
 
 const Header = ({
   userToken,
@@ -30,12 +30,7 @@ const Header = ({
             <div className="Header--content">
               <div className="Header--search">
                 <Link to="/">
-                  <img
-                    className="Header-logo"
-                    src={logo}
-                    alt="logo vinted"
-                    style={{ width: 75, height: 30 }}
-                  />
+                  <img className="Header-logo" src={logo} alt="logo vinted" />
                 </Link>
                 <FontAwesomeIcon className="Header--icon" icon="search" />
                 <input

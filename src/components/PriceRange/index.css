@@ -1,0 +1,34 @@
+/* PRICE RANGE */
+
+.PriceRange--renderTrack-bar {
+  width: 25%;
+  height: 36px;
+  display: flex;
+}
+
+.PriceRange--renderTrack-bg {
+  width: 100%;
+  height: 5px;
+  align-self: center;
+}
+
+.PriceRange--renderThumb-cercle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #09b1ba;
+}
+
+.PriceRange--renderThumb-price {
+  position: absolute;
+  top: -26px;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #09b1ba;
+}
