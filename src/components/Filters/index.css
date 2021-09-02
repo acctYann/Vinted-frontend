@@ -60,7 +60,7 @@
 
 @media (max-width: 480px) {
   .Filters {
-    max-width: 480px;
+    max-width: 100%;
     font-size: 12px;
     display: flex;
     align-items: flex-start;

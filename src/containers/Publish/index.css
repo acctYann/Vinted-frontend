@@ -1,28 +1,34 @@
 /* PUBLISH */
+
 .Publish--body {
   height: 100%;
   background-color: #f5f6f7;
 }
-.Publish--main {
+
+.Publish--container {
   width: 1280px;
   margin: 0 auto;
   padding-top: 100px;
 }
+
 .Publish--title {
   font-size: 24px;
   line-height: 20px;
   font-weight: 500;
 }
+
 .Publish--preview-image {
   margin-top: 16px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 2px gray;
 }
+
 .Publish--preview-image img {
   height: 90%;
   margin: 0 10px;
 }
+
 .Publish--preview-image-border {
   width: 1232px;
   height: 200px;
@@ -32,6 +38,7 @@
   border: 1px dashed #ebedee;
   border-radius: 3px;
 }
+
 .Publish--remove-img-button {
   position: relative;
   color: black;
@@ -43,16 +50,19 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
 .Publish--icon-times {
   margin: 0 3px;
   font-size: 20px;
 }
+
 .Publish--preview {
   margin-top: 16px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 2px gray;
 }
+
 .Publish--border {
   width: 1232px;
   height: 200px;
@@ -62,6 +72,7 @@
   border: 1px dashed #ebedee;
   border-radius: 3px;
 }
+
 .Publish--label-file {
   cursor: pointer;
   color: #0ab1ba;
@@ -74,56 +85,61 @@
   justify-content: center;
   border-radius: 4px;
 }
+
 .Publish--file {
   display: none;
 }
-.Publish--text {
-  font-size: 16px;
-  line-height: 13.3px;
-  font-weight: 700;
-}
+
 .Publish--icon-plus {
   margin: 0 10px;
   font-size: 30px;
 }
+
 .Publish--description {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
 }
+
 .Publish--content {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
 }
+
 .Publish--input-section,
 .Publish--text-input:not(:last-child) {
   height: 25px;
   border-bottom: 1px solid #ebedee;
 }
+
 .Publish--input-section1 {
   height: 222px;
   background-color: #fff;
   margin: 20px 0;
   box-shadow: 0 0 2px gray;
 }
+
 .Publish--input-section2 {
   height: 366px;
   background-color: #fff;
   margin: 20px 0;
   box-shadow: 0 0 2px gray;
 }
+
 .Publish--input-section3 {
   height: 131px;
   background-color: #fff;
   margin: 20px 0;
   box-shadow: 0 0 2px gray;
 }
+
 .Publish--text-input {
   display: flex;
   justify-content: space-between;
   padding: 24px;
 }
+
 .Publish--textarea {
   width: 50%;
   resize: none;
@@ -132,6 +148,7 @@
   font-size: 16px;
   outline: none;
 }
+
 .Publish--input {
   width: 50%;
   border: none;
@@ -139,6 +156,7 @@
   font-size: 16px;
   outline: none;
 }
+
 .Publish--input2 {
   width: 620px;
   border: none;
@@ -147,47 +165,59 @@
   outline: none;
   margin-bottom: 40px;
 }
+
 .Publish--textarea::placeholder {
   color: #eaebec;
 }
+
 .Publish--input::placeholder {
   color: #eaebec;
 }
+
 .Publish--input2::placeholder {
   color: #eaebec;
 }
+
 .Publish--textarea:hover {
   border-bottom: 1px solid #0ab1ba;
 }
+
 .Publish--input:hover {
   border-bottom: 1px solid #0ab1ba;
 }
+
 .Publish--input2:hover {
   border-bottom: 1px solid #0ab1ba;
 }
+
 .Publish--checkbox-section {
   width: 50%;
 }
+
 .Publish--checkbox-input > input {
   display: none;
 }
+
 .Publish--checkbox-design-checked {
   border-radius: 3px;
   padding: 3px 6px 3px 6px;
   margin: 0 15px 0 0;
   background-color: #0ab1ba;
 }
+
 .Publish--checkbox-design {
   border-radius: 3px;
   padding: 2px 11px 2px 11px;
   margin: 0 15px 0 0;
   border: 1px solid black;
 }
+
 .Publish--button-content {
   height: 143px;
   display: flex;
   justify-content: flex-end;
 }
+
 .Publish--button {
   color: #fff;
   background: #09b1ba;
@@ -201,7 +231,68 @@
   margin-top: 40px;
   outline: none;
 }
+
 .Publish--button:hover {
   background-color: #45c9cd;
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Publish--container {
+    max-width: 100%;
+  }
+
+  .Publish--preview-image-border {
+    max-width: 100%;
+  }
+
+  .Publish--border {
+    max-width: 100%;
+  }
+
+  .Publish--title {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .Publish--form {
+    margin: 0 20px;
+  }
+
+  .Publish--label-file {
+    font-size: 14px;
+  }
+
+  .Publish--textarea {
+    font-size: 12px;
+  }
+
+  .Publish--input {
+    font-size: 12px;
+  }
+
+  .Publish--input2 {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .Publish--input2 {
+    font-size: 12px;
+  }
+
+  .Publish--checkbox-design-checked {
+    padding: 1px 5px 1px 5px;
+    margin: 0 15px 0 0;
+  }
+
+  .Publish--checkbox-design {
+    padding: 0 10px 0 10px;
+    margin: 0 15px 0 0;
+  }
+
+  .Publish--button {
+    font-size: 12px;
+  }
 }

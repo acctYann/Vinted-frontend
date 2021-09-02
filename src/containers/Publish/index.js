@@ -58,9 +58,9 @@ const Publish = ({ userToken }) => {
 
   return userToken ? (
     <div className="Publish--body">
-      <div className="Publish--main">
+      <div className="Publish--container">
         <div className="Publish--title">Vends ton article</div>
-        <form className="Publish--container" onSubmit={handleSubmit}>
+        <form className="Publish--form" onSubmit={handleSubmit}>
           <div>
             {preview ? (
               <div className="Publish--preview-image">
@@ -204,7 +204,9 @@ const Publish = ({ userToken }) => {
                       value="exchange"
                       onChange={() => setAcceptedExchange(!acceptedExchange)}
                     />
-                    <span>Je suis intéressé(e) par les échanges</span>
+                    <span style={{ fontSize: 14 }}>
+                      Je suis intéressé(e) par les échanges
+                    </span>
                   </div>
                 </div>
               </div>
