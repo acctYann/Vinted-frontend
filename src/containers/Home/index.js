@@ -44,6 +44,7 @@ const Home = ({ data, isLoading }) => {
                         {offer.product_details[0].MARQUE}
                       </div>
                     </div>
+                    <div className="Home--divider"></div>
                   </div>
                 </Link>
               </div>

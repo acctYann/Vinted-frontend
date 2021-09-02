@@ -22,3 +22,24 @@
   color: white;
   cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Pagination--page-num {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 0;
+  }
+
+  .Pagination--page-num-arrow {
+    margin: 0 5px 0 0;
+    line-height: 22px;
+    width: 24px;
+    font-size: 14px;
+  }
+
+  .Pagination--title {
+    margin-right: 5px;
+  }
+}

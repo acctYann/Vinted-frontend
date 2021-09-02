@@ -18,23 +18,27 @@ const Payment = ({ title, price, total, protectionFees, shippingFees }) => {
   // const { title, price, total, protectionFees, shippingFees }  = location.state;
   return (
     <div className="Payment--body">
-      <div className="Payment--container">
-        <ProductSammary
-          price={price}
-          protectionFees={protectionFees}
-          shippingFees={shippingFees}
-          total={total}
-        />
-        <div className="Payment--card">
-          <div className="content">
-            Il ne vous reste plus qu'une étape pour vous offrir
-            <span className="bold"> {title}</span>. Vous allez payer
-            <span className="bold"> {total}</span> (frais de protection et frais
-            de port inclus).
-            <div className="divider" />
-            <Elements stripe={stripePromise}>
-              <CheckoutForm title={title} total={total} />
-            </Elements>
+      <div>
+        <div className="Payment--container">
+          <div className="Payment--border">
+            <ProductSammary
+              price={price}
+              protectionFees={protectionFees}
+              shippingFees={shippingFees}
+              total={total}
+            />
+            <div className="Payment--card">
+              <div className="content">
+                Il ne vous reste plus qu'une étape pour vous offrir
+                <span className="bold"> {title}</span>. Vous allez payer
+                <span className="bold"> {total}</span> (frais de protection et
+                frais de port inclus).
+                <div className="divider" />
+                <Elements stripe={stripePromise}>
+                  <CheckoutForm title={title} total={total} />
+                </Elements>
+              </div>
+            </div>
           </div>
         </div>
       </div>

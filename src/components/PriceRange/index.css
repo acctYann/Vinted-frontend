@@ -1,5 +1,6 @@
 /* PRICE RANGE */
 
+/* CSS de la barre */
 .PriceRange--renderTrack-bar {
   width: 25%;
   height: 36px;
@@ -11,6 +12,8 @@
   height: 5px;
   align-self: center;
 }
+
+/* CSS des boutons */
 
 .PriceRange--renderThumb-cercle {
   width: 15px;
@@ -31,4 +34,12 @@
   padding: 4px;
   border-radius: 4px;
   background-color: #09b1ba;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .PriceRange--renderTrack-bar {
+    width: 70%;
+  }
 }

@@ -56,5 +56,21 @@
   font-weight: bold;
 }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 480px) {
+  .Filters {
+    max-width: 480px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 20px;
+    padding-top: 10px;
+  }
+
+  .Filters--title {
+    margin: 0 5px 20px 0;
+    font-size: 12px;
+  }
 }

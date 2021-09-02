@@ -9,6 +9,10 @@
   left: 0;
 }
 
+.Payment--border {
+  box-shadow: 0px 0px 2px rgba(17, 17, 17, 0.24);
+}
+
 .Payment--container {
   width: 600px;
   margin: 0 auto;

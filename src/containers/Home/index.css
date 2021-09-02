@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background-color: "#fff";
-  padding-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .Home--container {
@@ -49,4 +49,50 @@
   font-size: 12px;
   line-height: 16px;
   color: rgb(153, 153, 153);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Home--body {
+    margin-bottom: 0;
+  }
+
+  .Home--container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .Home--container-product {
+    width: 100%;
+  }
+
+  .Home--title {
+    margin: 8px 20px;
+  }
+
+  .Home--img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .Home--content-product {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Home--divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(17, 17, 17, 0.1);
+    margin: 10px 0 0;
+  }
 }

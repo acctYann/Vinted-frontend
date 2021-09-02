@@ -19,7 +19,7 @@ const Pagination = ({ skip, setSkip, limit, setLimit, data }) => {
       ) : (
         <div className="Pagination--page-num-arrow hidden"></div>
       )}
-      <div>
+      <div className="Pagination--title">
         Page {skip} sur {tolalPages}
       </div>
       {skip < tolalPages ? (

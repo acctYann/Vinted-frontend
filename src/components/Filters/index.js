@@ -17,8 +17,8 @@ const Filters = ({
 }) => {
   return (
     <>
-      <div>
-        <div className="Filters">
+      <div className="Filters">
+        <div>
           <span className="Filters--title">Trier par prix :</span>
           <span className="checkbox">
             <input type="checkbox" readOnly checked={sortPrice} name="price" />
@@ -33,16 +33,16 @@ const Filters = ({
               </div>
             </div>
           </span>
-          <span className="Filters--title">Prix entre : </span>
-          <PriceRange setFetchRangeValues={setFetchRangeValues} />
-          <Pagination
-            skip={skip}
-            setSkip={setSkip}
-            limit={limit}
-            setLimit={setLimit}
-            data={data}
-          />
         </div>
+        <span className="Filters--title">Prix entre : </span>
+        <PriceRange setFetchRangeValues={setFetchRangeValues} />
+        <Pagination
+          skip={skip}
+          setSkip={setSkip}
+          limit={limit}
+          setLimit={setLimit}
+          data={data}
+        />
       </div>
     </>
   );
