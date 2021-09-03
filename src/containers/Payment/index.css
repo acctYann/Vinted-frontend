@@ -113,4 +113,8 @@
   .Payment--border {
     width: 90%;
   }
+
+  .Payment--card .divider {
+    margin: 0;
+  }
 }
