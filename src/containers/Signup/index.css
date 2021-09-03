@@ -24,6 +24,7 @@
 }
 
 .Signup--content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,4 +107,58 @@
   color: #09b1ba;
   margin-bottom: 20px;
   margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Signup--container {
+    width: 90%;
+    height: 550px;
+  }
+
+  .Signup--content {
+    margin-top: 20px;
+  }
+
+  .Signup--title {
+    height: 10px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 30px;
+  }
+
+  .Signup--input {
+    width: 90%;
+    height: 38px;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .span {
+    font-size: 16px;
+  }
+
+  .Signup--checkbox-container > div {
+    display: flex;
+  }
+
+  .Signup--checkbox-container > p {
+    font-size: 14px;
+  }
+  .Signup--container input[type="checkbox"] {
+    margin-right: 15px;
+  }
+
+  .Signup--login-error-message {
+    font-size: 14px;
+  }
+
+  .Signup--login {
+    font-size: 14px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
 }

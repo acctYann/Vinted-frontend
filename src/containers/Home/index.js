@@ -1,12 +1,20 @@
 // HOME
 import "../Home/index.css";
 import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 
 import Hero from "../../components/Hero";
 
 const Home = ({ data, isLoading }) => {
   return isLoading ? (
-    <p>Chargement...</p>
+    <Loader
+      className="loader"
+      type="Puff"
+      color="#09b1ba"
+      height={80}
+      width={80}
+      timeout={3000}
+    />
   ) : (
     <div className="Home--body">
       <Hero />

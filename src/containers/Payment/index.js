@@ -1,21 +1,21 @@
 // PAYMENT
 import "../Payment/index.css";
 import "../../components/CheckoutForm";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-import CheckoutForm from "../../components/CheckoutForm";
-import ProductSammary from "../../components/ProductSammary";
+import CheckoutForm from "../../components/CheckoutForm.js";
+import ProductSammary from "../../components/ProductSammary.js";
 
 const stripePromise = loadStripe(
   "pk_test_51JKRkjCWFmq7jOIrl1npKt3sNRXn3zzJjvGzUnQ6UyzQ6UmCQIvnY11oMFQpkCQGYWKGbgyc9BvyW5jLvIvhqANB00AwLM4kPr"
 );
 
-const Payment = ({ title, price, total, protectionFees, shippingFees }) => {
-  // const location = useLocation();
-  // // console.log(location);
-  // const { title, price, total, protectionFees, shippingFees }  = location.state;
+const Payment = () => {
+  const location = useLocation();
+  // console.log(location);
+  const { title, price, total, protectionFees, shippingFees } = location.state;
   return (
     <div className="Payment--body">
       <div>

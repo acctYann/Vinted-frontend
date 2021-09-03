@@ -252,8 +252,13 @@
     max-width: 100%;
   }
 
-  .Publish--title {
+  .Publish--icon-plus {
+    margin: 0 5px 0 0;
     font-size: 20px;
+  }
+
+  .Publish--title-content {
+    font-size: 18px;
     margin-left: 20px;
   }
 
@@ -262,7 +267,13 @@
   }
 
   .Publish--label-file {
+    font-size: 12px;
+    width: 140px;
+  }
+
+  .Publish--title {
     font-size: 14px;
+    margin-left: 0;
   }
 
   .Publish--textarea {
@@ -283,16 +294,25 @@
   }
 
   .Publish--checkbox-design-checked {
-    padding: 1px 5px 1px 5px;
-    margin: 0 15px 0 0;
+    padding: 1px 4px;
+    margin: 0 5px 0 0;
   }
 
   .Publish--checkbox-design {
-    padding: 0 10px 0 10px;
-    margin: 0 15px 0 0;
+    padding: 0px 9px;
+    margin: 0 5px 0 0;
+  }
+
+  .Publish--exchange {
+    font-size: 12px;
+  }
+
+  .Publish--button-content {
+    height: 90px;
   }
 
   .Publish--button {
     font-size: 12px;
+    margin-top: 15px;
   }
 }

@@ -59,7 +59,7 @@ const Publish = ({ userToken }) => {
   return userToken ? (
     <div className="Publish--body">
       <div className="Publish--container">
-        <div className="Publish--title">Vends ton article</div>
+        <div className="Publish--title-content">Vends ton article</div>
         <form className="Publish--form" onSubmit={handleSubmit}>
           <div>
             {preview ? (
@@ -107,7 +107,7 @@ const Publish = ({ userToken }) => {
           <div>
             <div className="Publish--input-section1">
               <div className="Publish--text-input">
-                <h1>Titre</h1>
+                <h1 className="Publish--title">Titre</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -116,7 +116,7 @@ const Publish = ({ userToken }) => {
                 />
               </div>
               <div className="Publish--text-input">
-                <h1>Décris ton article</h1>
+                <h1 className="Publish--title">Décris ton article</h1>
                 <textarea
                   rows="5"
                   className="Publish--textarea"
@@ -128,7 +128,7 @@ const Publish = ({ userToken }) => {
             </div>
             <div className="Publish--input-section2">
               <div className="Publish--text-input">
-                <h1>Marque</h1>
+                <h1 className="Publish--title">Marque</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -137,7 +137,7 @@ const Publish = ({ userToken }) => {
                 />
               </div>
               <div className="Publish--text-input">
-                <h1>taille</h1>
+                <h1 className="Publish--title">taille</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -146,7 +146,7 @@ const Publish = ({ userToken }) => {
                 />
               </div>
               <div className="Publish--text-input">
-                <h1>Couleur</h1>
+                <h1 className="Publish--title">Couleur</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -155,7 +155,7 @@ const Publish = ({ userToken }) => {
                 />
               </div>
               <div className="Publish--text-input">
-                <h1>Etat</h1>
+                <h1 className="Publish--title">Etat</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -164,7 +164,7 @@ const Publish = ({ userToken }) => {
                 />
               </div>
               <div className="Publish--text-input">
-                <h1>Lieu</h1>
+                <h1 className="Publish--title">Lieu</h1>
                 <input
                   className="Publish--input"
                   type="text"
@@ -175,7 +175,7 @@ const Publish = ({ userToken }) => {
             </div>
             <div className="Publish--input-section3">
               <div className="Publish--text-input">
-                <h1>Prix</h1>
+                <h1 className="Publish--title">Prix</h1>
                 <div className="Publish--checkbox-section">
                   <input
                     className="Publish--input2"
@@ -204,7 +204,7 @@ const Publish = ({ userToken }) => {
                       value="exchange"
                       onChange={() => setAcceptedExchange(!acceptedExchange)}
                     />
-                    <span style={{ fontSize: 14 }}>
+                    <span className="Publish--exchange">
                       Je suis intéressé(e) par les échanges
                     </span>
                   </div>

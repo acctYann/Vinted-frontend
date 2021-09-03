@@ -101,3 +101,16 @@
   border-radius: 4px;
   background: white;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .Payment--container {
+    max-width: 100%;
+    padding: 36px 20px;
+  }
+
+  .Payment--border {
+    width: 90%;
+  }
+}

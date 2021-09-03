@@ -3,6 +3,7 @@ import "../Offer/index.css";
 import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 const Offer = () => {
   const [data, setData] = useState([]);
@@ -34,7 +35,14 @@ const Offer = () => {
   }, [id]);
 
   return isLoading ? (
-    <p>En cours de chargement...</p>
+    <Loader
+      className="loader"
+      type="Puff"
+      color="#09b1ba"
+      height={80}
+      width={80}
+      timeout={3000}
+    />
   ) : (
     <div className="Offer--body">
       <div className="Offer--container">
