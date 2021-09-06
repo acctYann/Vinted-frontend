@@ -330,17 +330,13 @@
     margin-left: 20px;
   }
 
-  .Publish--icon-plus {
-    margin: 0 5px 0 0;
-  }
-
   .Publish--form {
     margin: 0 20px;
   }
 
   .Publish--label-file {
     font-size: 14px;
-    width: 150px;
+    width: 180px;
   }
 
   .Publish--input2 {
