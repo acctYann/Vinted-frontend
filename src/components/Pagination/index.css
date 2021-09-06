@@ -25,7 +25,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Pagination--page-num {
     font-size: 12px;
     margin-top: 0px;

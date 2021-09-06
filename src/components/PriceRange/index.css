@@ -38,7 +38,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .PriceRange--renderTrack-bar {
     width: 90%;
   }

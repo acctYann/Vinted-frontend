@@ -104,7 +104,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Payment--container {
     max-width: 100%;
     padding: 36px 20px;
@@ -115,6 +115,15 @@
   }
 
   .Payment--card .divider {
-    margin: 0;
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Payment--body {
+    height: 100%;
+    position: initial;
+    right: 0;
+    left: 0;
   }
 }

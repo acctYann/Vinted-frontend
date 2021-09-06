@@ -54,7 +54,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Home--body {
     margin-bottom: 0;
   }
@@ -93,5 +93,11 @@
     height: 1px;
     background: rgba(17, 17, 17, 0.1);
     margin: 10px 0 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Home--container {
+    width: 100%;
   }
 }

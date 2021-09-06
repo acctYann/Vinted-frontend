@@ -87,7 +87,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Login--container {
     width: 90%;
   }
@@ -114,5 +114,15 @@
 
   .link {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Login--body {
+    height: 100%;
+  }
+
+  .Login--container {
+    margin-bottom: 40px;
   }
 }

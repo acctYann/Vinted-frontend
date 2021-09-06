@@ -111,7 +111,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Signup--container {
     width: 90%;
     height: 550px;
@@ -160,5 +160,15 @@
 
   .link {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Signup--body {
+    height: 100%;
+  }
+
+  .Signup--container {
+    margin-bottom: 40px;
   }
 }

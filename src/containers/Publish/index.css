@@ -11,7 +11,7 @@
   padding-top: 100px;
 }
 
-.Publish--title {
+.Publish--title-content {
   font-size: 24px;
   line-height: 20px;
   font-weight: 500;
@@ -239,7 +239,7 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Publish--container {
     max-width: 100%;
   }
@@ -289,10 +289,6 @@
     font-size: 12px;
   }
 
-  .Publish--input2 {
-    font-size: 12px;
-  }
-
   .Publish--checkbox-design-checked {
     padding: 1px 4px;
     margin: 0 5px 0 0;
@@ -314,5 +310,31 @@
   .Publish--button {
     font-size: 12px;
     margin-top: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Publish--container {
+    max-width: 100%;
+  }
+
+  .Publish--preview-image-border {
+    max-width: 100%;
+  }
+
+  .Publish--border {
+    max-width: 100%;
+  }
+
+  .Publish--title-content {
+    margin-left: 20px;
+  }
+
+  .Publish--form {
+    margin: 0 20px;
+  }
+
+  .Publish--input2 {
+    width: 100%;
   }
 }
