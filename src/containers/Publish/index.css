@@ -330,11 +330,34 @@
     margin-left: 20px;
   }
 
+  .Publish--icon-plus {
+    margin: 0 5px 0 0;
+  }
+
   .Publish--form {
     margin: 0 20px;
   }
 
+  .Publish--label-file {
+    font-size: 14px;
+    width: 150px;
+  }
+
   .Publish--input2 {
     width: 100%;
+  }
+
+  .Publish--checkbox-design-checked {
+    padding: 1px 4px;
+    margin: 0 5px 0 0;
+  }
+
+  .Publish--checkbox-design {
+    padding: 0px 9px;
+    margin: 0 5px 0 0;
+  }
+
+  .Publish--exchange {
+    font-size: 12px;
   }
 }
