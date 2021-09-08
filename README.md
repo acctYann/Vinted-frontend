@@ -10,7 +10,7 @@
 
 <p> Personal fullstack project inspired by Vinted website.<br>
 The project is hosted on Netlify (frontend) and Heroku (backend).<br> 
-You can see the frontend code <a href="https://github.com/acctYann/Vinted-frontend.git"> here</a> and backend code <a href="https://github.com/acctYann/Vinted-backend.git"> here</a>.</br>
+See backend code <a href="https://github.com/acctYann/Vinted-backend.git"> here</a>.</br>
 
 <h3>
 <a href="https://vinted-yann.netlify.app/">Live Demo</a>
@@ -20,12 +20,12 @@ You can see the frontend code <a href="https://github.com/acctYann/Vinted-fronte
 
 <p align="center">
 <a href="https://vinted-yann.netlify.app/ ">
-  <img src="https://res.cloudinary.com/dssoozni5/video/upload/v1631101165/vinted/readme/vinted_l0husl.gif" alt ="Vinted Project"/>
+  <img src="https://res.cloudinary.com/dssoozni5/video/upload/v1631106807/vinted/readme/vinted_jex5qh.mp4" alt ="Vinted Project"/>
   </a>
 </p>
 <br/>
 
-<h3>Install</h3>
+<h2>Install</h2>
 <p>Run <code>yarn</code> in your console to install all dependencies and <code>yarn start</code> to launch. It should open on http://localhost:3000.</p>
 <br/>
 
