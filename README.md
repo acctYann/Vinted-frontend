@@ -20,7 +20,7 @@ See backend code <a href="https://github.com/acctYann/Vinted-backend.git"> here<
 
 <p align="center">
 <a href="https://vinted-yann.netlify.app/ ">
-  <img src="https://res.cloudinary.com/dssoozni5/video/upload/v1631106807/vinted/readme/vinted_jex5qh.mp4" alt ="Vinted Project"/>
+  <img src="https://res.cloudinary.com/dssoozni5/image/upload/v1631117293/vinted/readme/vinted_imucqe.gif" alt ="Vinted Project"/>
   </a>
 </p>
 <br/>
