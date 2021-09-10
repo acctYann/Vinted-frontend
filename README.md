@@ -25,7 +25,7 @@ See backend code <a href="https://github.com/acctYann/Vinted-backend.git"> here<
 </p>
 <br/>
 
-<h2>Install</h2>
+<h2>Installation</h2>
 <p>Run <code>yarn</code> in your console to install all dependencies and <code>yarn start</code> to launch. It should open on http://localhost:3000.</p>
 <br/>
 
